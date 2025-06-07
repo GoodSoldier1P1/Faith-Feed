@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import { Tabs } from 'expo-router';
 import { Ionicons } from "@expo/vector-icons";
@@ -6,7 +5,8 @@ import { COLORS } from '@/constants/theme';
 
 export default function TabLayout() {
   return (
-    <Tabs
+    // Changing Global Options
+    <Tabs 
       screenOptions={{
         tabBarShowLabel: false,
         headerShown: false,
@@ -23,6 +23,9 @@ export default function TabLayout() {
         },
       }}
     >
+
+      {/* Changing Per Page Options */}
+
       <Tabs.Screen name='index'
         options={{
           tabBarIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />
